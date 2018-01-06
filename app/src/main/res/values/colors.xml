@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="partition">#dad4d4</color>
+    <color name="black_80">#fd000000</color>
+    <color name="white">#ffffff</color>
+    <color name="bg_color">#8b8383</color>
+    <color name="pink">#fafc2461</color>
+    <color name="black">#000</color>
+    <color name="touch_color">#999797</color>
+    <color name="black_60">#fd393838</color>
+    <color name="grey">#fdb7b6b6</color>
+    <color name="light_black">#fd515050</color>
+    <color name="transparent">#80000000</color>
+
+</resources>

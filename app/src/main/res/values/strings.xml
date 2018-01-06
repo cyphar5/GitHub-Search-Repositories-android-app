@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GithubSearch</string>
+    <string name="no_repos">No Repositories Found!</string>
+    <string name="contributors">Contributors :</string>
+    <string name="error_fetcching">Error fetching API.</string>
+    <string name="repo">Repositories</string>
+    <string name= "not_found">Description not found!</string>
+    <string name = "search_repositories">Search Repositories</string>
+</resources>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    tools:context="com.java.githubsearch.activities.RepoInfoActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+            android:layout_height="225dp"
+            android:layout_width="match_parent"
+            app:statusBarScrim="@color/pink"
+             android:fitsSystemWindows="true"
+            android:id="@+id/app_bar_layout">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:id="@+id/ria_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7"/>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/tool_bar"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_width="match_parent"
+                    app:layout_collapseMode="pin" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_arrow_back"
+            android:padding="2dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/ari_back"/>
+    </RelativeLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ac_view"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/ac_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/ac_view"
+            android:layout_marginTop="25dp">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Repo Name :"
+                    android:textSize="15dp"
+                    android:textColor="@color/black_80"/>
+
+                <TextView
+                    android:id="@+id/ria_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="40"
+                    android:textSize="15dp"
+                    android:text="Not Available"
+                    android:textColor="@color/black_80"
+                    android:layout_marginLeft="20dp"
+                    android:singleLine="true"/>
+                
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="RepoUrl :"
+                    android:textSize="15dp"
+                    android:textColor="@color/black_80"/>
+
+                <TextView
+                    android:id="@+id/ria_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="40"
+                    android:text="0"
+                    android:textSize="15dp"
+                    android:textColor="@color/black_80"
+                    android:layout_marginLeft="45dp"
+                    android:singleLine="true"/>
+                
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Watchers :"
+                    android:textSize="15dp"
+                    android:textColor="@color/black_80"/>
+
+                <TextView
+                    android:id="@+id/ria_watchers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="40"
+                    android:text="0"
+                    android:textSize="15dp"
+                    android:textColor="@color/black_80"
+                    android:layout_marginLeft="33dp"
+                    android:singleLine="true"/>
+                
+                
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Open Issues :"
+                    android:textSize="15dp"
+                    android:textColor="@color/black_80"/>
+                
+                <TextView
+                    android:id="@+id/ria_open_issues"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="40"
+                    android:textSize="15dp"
+                    android:text="0"
+                    android:textColor="@color/black_80"
+                    android:layout_marginLeft="15dp"
+                    android:singleLine="true"/>
+
+
+            </LinearLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/grey"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:weightSum="10"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="7dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="7"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Contributors"
+                    android:textSize="18dp"
+                    android:textColor="@color/black_80"/>
+
+                <TextView
+                    android:id="@+id/ria_contributors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="40"
+                    android:textSize="18dp"
+                    android:text="0"
+                    android:textColor="@color/black_80"
+                    android:layout_marginLeft="15dp"
+                    android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ria_recylcerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/ac_progress_dialog"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="55dp"
+                    android:visibility="visible">
+                </ProgressBar>
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

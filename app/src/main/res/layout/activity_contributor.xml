@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/upper_card"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:cardBackgroundColor="@color/pink">
+
+        <ImageView
+            android:id="@+id/ac_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="2dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_marginLeft="15dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="70dp"
+            android:gravity="center_vertical"
+            android:text="User Info"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/upper_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="3.6"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ac_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name :"
+                        android:textColor="@color/black_80"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/ac_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="62dp"
+                        android:maxLength="30"
+                        android:singleLine="true"
+                        android:text="Not Found"
+                        android:textColor="@color/black_80"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Public Repos :"
+                        android:textColor="@color/black_80"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/ac_public_repo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:maxLength="30"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/black_80"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Followers :"
+                        android:textColor="@color/black_80"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/ac_followers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="38dp"
+                        android:maxLength="30"
+                        android:text="0"
+                        android:singleLine="true"
+                        android:textColor="@color/black_80"
+                        android:textSize="16dp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Following :"
+                        android:textColor="@color/black_80"
+                        android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/ac_following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp"
+                    android:maxLength="30"
+                    android:text="0"
+                    android:singleLine="true"
+                    android:textColor="@color/black_80"
+                    android:textSize="16dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/repo_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/black_80"
+        android:layout_below="@id/card_view"
+        android:textSize="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:text="@string/repo" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/grey"
+        android:layout_below="@id/repo_text"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ac_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/repo_text"></android.support.v7.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/arw_progress_dialog"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible">
+    </ProgressBar>
+
+
+</RelativeLayout>
